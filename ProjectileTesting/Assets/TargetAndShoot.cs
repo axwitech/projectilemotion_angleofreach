@@ -29,13 +29,6 @@ public class TargetAndShoot : MonoBehaviour
             float distance = enemy.transform.position.x - transform.position.x;
             Vector3 directionalVector = enemy.transform.position - transform.position;
 
-            float v2 = projectileSpeed * projectileSpeed;
-            float v4 = v2 * v2;
-
-            float x = enemy.transform.position.x;
-            float x2 = x * x;
-            float y = enemy.transform.position.y;
-
             //float theta = 0.5f*Mathf.Asin((gravity * distance) / (projectileSpeed * projectileSpeed));
             float theta = Mathf.Atan(v2 - Mathf.Sqrt(v4 - gravity * (gravity * x2 + 2 * y * v2)) / gravity * x);
             //theta = Mathf.Rad2Deg * theta;
